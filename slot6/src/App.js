@@ -1,7 +1,9 @@
-import React from 'react';
-import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Carousel, Container, Form, Nav, Navbar } from 'react-bootstrap';
 
 function App() {
+  const [index, setIndex] = useState(0);
+
   return (
     <main className="bg-dark text-white min-vh-100">
       <Navbar bg="dark" variant="dark" expand="lg" className="px-3">
@@ -28,6 +30,44 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <Carousel activeIndex={index} onSelect={setIndex} id="home">
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/pizza1.jpg"
+            alt="First slide"
+            style={{ height: '450px', objectFit: 'cover' }}
+          />
+          <Carousel.Caption className="text-start">
+            <h3>Neapolitan Pizza</h3>
+            <p>If you're looking for a traditional Italian pizza, Neapolitan is the way to go!</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/pizza2.jpg"
+            alt="Second slide"
+            style={{ height: '450px', objectFit: 'cover' }}
+          />
+          <Carousel.Caption className="text-start">
+            <h3>Delicious Pizza</h3>
+            <p>Fresh ingredients, baked to perfection for maximum taste.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/pizza3.jpg"
+            alt="Third slide"
+            style={{ height: '450px', objectFit: 'cover' }}
+          />
+          <Carousel.Caption className="text-start">
+            <h3>Cheese Lovers</h3>
+            <p>Loaded with rich, melted mozzarella cheese and special sauce.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </main>
   );
 }
