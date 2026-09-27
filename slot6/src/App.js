@@ -1,8 +1,42 @@
 import React, { useState } from 'react';
-import { Button, Carousel, Container, Form, Nav, Navbar } from 'react-bootstrap';
+import { Badge, Button, Card, Carousel, Col, Container, Form, Nav, Navbar, Row } from 'react-bootstrap';
 
 function App() {
   const [index, setIndex] = useState(0);
+  const pizzaMenu = [
+    {
+      id: 1,
+      name: 'Margherita Pizza',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla.',
+      badge: 'SALE',
+      badgeBg: 'warning',
+      img: '/menu1.jpg'
+    },
+    {
+      id: 2,
+      name: 'Mushroom Pizza',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla.',
+      badge: '',
+      badgeBg: '',
+      img: '/menu2.jpg'
+    },
+    {
+      id: 3,
+      name: 'Hawaiian Pizza',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla.',
+      badge: 'NEW',
+      badgeBg: 'warning',
+      img: '/menu3.jpg'
+    },
+    {
+      id: 4,
+      name: 'Pesto Pizza',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla.',
+      badge: 'SALE',
+      badgeBg: 'warning',
+      img: '/menu4.jpg'
+    }
+  ];
 
   return (
     <main className="bg-dark text-white min-vh-100">
@@ -68,6 +102,41 @@ function App() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <Container className="my-5" id="menu">
+        <h2 className="text-center mb-4 fw-bold">Our Menu</h2>
+        <Row>
+          {pizzaMenu.map((item) => (
+            <Col key={item.id} lg={3} md={6} sm={12} className="mb-4">
+              <Card className="h-100 bg-white text-dark position-relative border-0 rounded-0">
+                {item.badge && (
+                  <Badge
+                    bg={item.badgeBg}
+                    className="position-absolute top-0 start-0 m-2 text-dark font-weight-bold px-2 py-1 rounded-0"
+                    style={{ zIndex: 1 }}
+                  >
+                    {item.badge}
+                  </Badge>
+                )}
+                <Card.Img
+                  variant="top"
+                  src={item.img}
+                  style={{ height: '180px', objectFit: 'cover' }}
+                  className="rounded-0"
+                />
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title className="fw-bold">{item.name}</Card.Title>
+                  <Card.Text className="text-muted small flex-grow-1">
+                    {item.desc}
+                  </Card.Text>
+                  <Button variant="dark" className="w-100 rounded-0 mt-3">
+                    Buy
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </main>
   );
 }
