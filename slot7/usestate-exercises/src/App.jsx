@@ -1,9 +1,12 @@
 import Exercise1 from './components/Exercise1'
+import Exercise2 from './components/Exercise2'
 
 function App() {
   return (
     <div>
       <Exercise1 />
+      <hr className="my-4" />
+      <Exercise2 />
     </div>
   )
 }
