@@ -1,9 +1,9 @@
-import FaqAccordion from './usestate/FaqAccordion';
+import ReviewForm from './usestate/ReviewForm';
 
 function App() {
   return (
     <div>
-      <FaqAccordion />
+      <ReviewForm />
     </div>
   );
 }
