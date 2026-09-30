@@ -1,9 +1,9 @@
-import StepCounter from './usereducer/StepCounter';
+import OrderTracker from './usereducer/OrderTracker';
 
 function App() {
   return (
     <div className="container my-4">
-      <StepCounter />
+      <OrderTracker />
     </div>
   );
 }
