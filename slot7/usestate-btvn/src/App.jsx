@@ -1,9 +1,9 @@
-import BmiCalculator from './usestate/BmiCalculator';
+import StudentManager from './usestate/StudentManager';
 
 function App() {
   return (
     <div>
-      <BmiCalculator />
+      <StudentManager />
     </div>
   );
 }
