@@ -1,9 +1,9 @@
-import StudentManager from './usestate/StudentManager';
+import QuizApp from './usestate/QuizApp';
 
 function App() {
   return (
     <div>
-      <StudentManager />
+      <QuizApp />
     </div>
   );
 }
