@@ -1,11 +1,10 @@
-import ProductFilter from './components/ProductFilter';
-import { products } from './data/products';
+import RegisterForm from './components/RegisterForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => (
   <div className="container my-4">
-    <h5>Bài 3: Tìm kiếm, lọc và sắp xếp sản phẩm</h5>
-    <ProductFilter products={products} />
+    <h5 className="mb-3 text-center">Bài 4: Form đăng ký có điều khiển</h5>
+    <RegisterForm />
   </div>
 );
 
