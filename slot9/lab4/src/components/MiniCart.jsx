@@ -1,10 +1,9 @@
-Set-Content -Path src/components/MiniCart.jsx -Value @"
-import { useState } from 'react';
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { cartItems } from '../data/cart';
-import { formatVND } from '../utils/format';
+Set-Content -Path src/components/MiniCart.jsx -Value 'import { useState } from "react";
+import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import { cartItems } from "../data/cart";
+import { formatVND } from "../utils/format";
 
 const MIN_QUANTITY = 1;
 const MAX_QUANTITY = 10;
@@ -20,12 +19,11 @@ const MiniCart = () => {
               ...item,
               quantity: Math.min(MAX_QUANTITY, Math.max(MIN_QUANTITY, item.quantity + delta)),
             }
-          : item,
-      ),
+          : item
+      )
     );
   };
 
-  // Dữ liệu dẫn xuất: tính lại mỗi lần render, không lưu vào state
   const totalQuantity = items.reduce((sum, { quantity }) => sum + quantity, 0);
   const totalPrice = items.reduce((sum, { price, quantity }) => sum + price * quantity, 0);
 
@@ -82,5 +80,4 @@ const MiniCart = () => {
   );
 };
 
-export default MiniCart;
-"@
+export default MiniCart;'
