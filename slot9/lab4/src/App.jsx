@@ -1,6 +1,6 @@
-Set-Content -Path src/App.jsx -Value 'import QuantityPicker from "./components/QuantityPicker";
-import MiniCart from "./components/MiniCart";
-import "bootstrap/dist/css/bootstrap.min.css";
+import QuantityPicker from './components/QuantityPicker';
+import MiniCart from './components/MiniCart';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => (
   <div className="container my-4">
@@ -15,4 +15,4 @@ const App = () => (
   </div>
 );
 
-export default App;'
+export default App;
