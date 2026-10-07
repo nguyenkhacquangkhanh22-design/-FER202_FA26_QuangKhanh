@@ -1,4 +1,3 @@
-Set-Content -Path src/components/QuantityPicker.jsx -Value @"
 import { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
@@ -43,7 +42,3 @@ const QuantityPicker = ({ min = 1, max = 10 }) => {
 };
 
 export default QuantityPicker;
-"@
-
-git add src/components/QuantityPicker.jsx
-git commit -m "feat(Lab4): implement QuantityPicker component"
