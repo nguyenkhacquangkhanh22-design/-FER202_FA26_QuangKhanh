@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 
 import AppNavbar from './components/Navbar';
+import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -21,6 +22,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Container>
+
+      <Footer />
     </BrowserRouter>
   );
 }
