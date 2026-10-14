@@ -1,0 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import New from './pages/New';
+import Contact from './pages/Contact';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Container className="mt-4 text-end">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/new" element={<New />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Container>
+    </BrowserRouter>
+  );
+}
+
+export default App;
