@@ -3,6 +3,7 @@ import AxiosDemo from './components/AxiosDemo';
 import PostList from './components/PostList';
 import CreatePost from './components/CreatePost';
 import UpdatePost from './components/UpdatePost';
+import PatchPost from './components/PatchPost';
 import './App.css';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <CreatePost />
       <hr />
       <UpdatePost />
+      <hr />
+      <PatchPost />
     </div>
   );
 }
