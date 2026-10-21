@@ -5,11 +5,11 @@ import CreatePost from './components/CreatePost';
 import UpdatePost from './components/UpdatePost';
 import PatchPost from './components/PatchPost';
 import DeletePost from './components/DeletePost';
-import './App.css';
+import RequestConfig from './components/RequestConfig';
 
 function App() {
   return (
-    <div className="container mt-4">
+    <div style={{ padding: '24px', maxWidth: '800px', margin: '0 auto' }}>
       <h1>DemoAxios</h1>
       <hr />
       <AxiosDemo />
@@ -23,6 +23,8 @@ function App() {
       <PatchPost />
       <hr />
       <DeletePost />
+      <hr />
+      <RequestConfig />
     </div>
   );
 }
