@@ -1,5 +1,6 @@
 import React from 'react';
 import AxiosDemo from './components/AxiosDemo';
+import PostList from './components/PostList';
 import './App.css';
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
       <h1>DemoAxios</h1>
       <hr />
       <AxiosDemo />
+      <hr />
+      <PostList />
     </div>
   );
 }
