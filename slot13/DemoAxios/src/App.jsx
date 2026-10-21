@@ -4,6 +4,7 @@ import PostList from './components/PostList';
 import CreatePost from './components/CreatePost';
 import UpdatePost from './components/UpdatePost';
 import PatchPost from './components/PatchPost';
+import DeletePost from './components/DeletePost';
 import './App.css';
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       <UpdatePost />
       <hr />
       <PatchPost />
+      <hr />
+      <DeletePost />
     </div>
   );
 }
